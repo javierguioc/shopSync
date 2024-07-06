@@ -1,0 +1,35 @@
+# Dependency directories
+/apps/backend/node_modules/
+/apps/frontend/node_modules/
+/node_modules/
+
+# Specific files
+/apps/backend/nodemon.json
+/apps/frontend/next.config.js
+
+# Build directories
+/apps/frontend/.next/
+/apps/frontend/out/
+
+# Environment variables
+/apps/backend/.env
+/apps/frontend/.env
+
+# IDE files
+/apps/backend/.vscode/
+/apps/frontend/.vscode/
+
+# Editor directories
+/apps/backend/.idea/
+/apps/frontend/.idea/
+
+# Logs
+/apps/backend/logs/
+/apps/frontend/logs/
+
+
+# macOS
+.DS_Store
+
+# npm
+npm-debug.log*
