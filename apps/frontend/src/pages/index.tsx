@@ -1,32 +1,18 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+
+import { useProducts } from '../hooks/useProducts';
+import ProductList from '@/components/ProductList';
+import CartPage from '@/components/CartPage'; 
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState(null);
+  const { products, error } = useProducts();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('http://localhost:3001/products');
-        setProducts(response.data);
-      } catch (error) {
-        setError(error.message);
-      }
-    };
-
-    fetchProducts();
-  }, []);
+  if (error) return <p>{error}</p>;
 
   return (
     <div>
       <h1>Product List</h1>
-      {error && <p>Error: {error}</p>}
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>{product.name}</li>
-        ))}
-      </ul>
+      <ProductList products={products} />
+      <CartPage />
     </div>
   );
 };

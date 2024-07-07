@@ -1,0 +1,48 @@
+
+.cartItem {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartItem h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.cartItem p {
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.cartItem input[type="number"] {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cartItem .removeButton {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cartItem .removeButton:hover {
+  background-color: #c82333;
+}
+
+.removeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
